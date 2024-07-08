@@ -65,3 +65,20 @@ kubectl port-forward service/postgre 5432:5432
 docker build -t (namespace)/review-filmes:v2 -f src/Review-Filmes.Web/Dockerfile --push ./src/
 kubectl rollout undo deployment reviewfilmes
 ```
+
+
+## Acesse o AWS Management Console e navegue até o serviço EKS
+
+
+## Crie uma Role IAM para os nós do worker
+
+
+## Configure um grupo de nós (Node Group)
+
+
+## Configure o kubectl para acessar o cluster EKS
+```bash
+aws eks --region <REGION> update-kubeconfig --name <CLUSTER_NAME>
+```
+
+## Criação do Workflow YAML para GitHub Actions
